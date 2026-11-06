@@ -171,7 +171,7 @@ const opere = [
   immagini: [],
   cartella: "libro",
   numeroImmagini: 12,
-  estensioni: ["jpeg", "png", "jpg", "PNG"]
+  estensioni: ["jpeg", "JPEG", "jpg", "JPG", "png", "PNG"]
 },
 {
   titolo: "Manuale per perdersi",
@@ -605,15 +605,27 @@ function mostraImmagine(numero) {
 
   const formato = String(numeroFile).padStart(2, "0");
 
-immagineIngrandita.onerror = () => {
-  if (immagineIngrandita.src.endsWith(".jpeg")) {
-    immagineIngrandita.src =
-      `${operaCorrente.cartella}/${formato}.png`;
-  }
-};
+const estensioni = operaCorrente.estensioni ||
+  [operaCorrente.estensione || "jpeg"];
 
-immagineIngrandita.src =
-  `${operaCorrente.cartella}/${formato}.${operaCorrente.estensione}`;
+let tentativo = 0;
+
+function caricaProssimaEstensione() {
+  if (tentativo >= estensioni.length) {
+    immagineIngrandita.onerror = null;
+    console.error("Immagine non trovata:", formato);
+    return;
+  }
+
+  const estensione = estensioni[tentativo++];
+
+  immagineIngrandita.src =
+    `${operaCorrente.cartella}/${formato}.${estensione}`;
+}
+
+immagineIngrandita.onerror = caricaProssimaEstensione;
+
+caricaProssimaEstensione();
 
   immagineIngrandita.alt =
     `Illustrazione ${numeroFile} — ${operaCorrente.titolo}`;
