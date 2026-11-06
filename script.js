@@ -49,11 +49,11 @@ document.querySelectorAll(".missione").forEach((scheda) => {
       immagine.alt = `Immagine ${numero} del contest ${indice + 1}`;
       immagine.loading = "lazy";
 
-      immagine.dataset.formato = "JPEG";
-      immagine.src = `${datiContest.cartella}/${nome}.JPEG`;
+      immagine.dataset.formato = "jpeg";
+      immagine.src = `${datiContest.cartella}/${nome}.jpeg`;
 
       immagine.onerror = () => {
-        if (immagine.dataset.formato === "JPEG") {
+        if (immagine.dataset.formato === "jpeg") {
           immagine.dataset.formato = "png";
           immagine.src = `${datiContest.cartella}/${nome}.png`;
         } else {
