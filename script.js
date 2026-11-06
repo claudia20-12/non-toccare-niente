@@ -558,8 +558,8 @@ if (interruttorePersonaggio && immaginePersonaggio) {
     const stressato = interruttorePersonaggio.getAttribute("aria-pressed") === "true";
 
     immaginePersonaggio.src = stressato
-      ? "assets/personaggio-nonmatto.PNG"
-      : "assets/personaggio-matto.PNG";
+      ? "assets/personaggio-nonmatto.png"
+      : "assets/personaggio-matto.png";
 
     interruttorePersonaggio.setAttribute("aria-pressed", String(!stressato));
 
