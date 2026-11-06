@@ -1,0 +1,420 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" href="logo.png">
+  <meta name="theme-color" content="#f8f6f0">
+  <meta name="description" content="Un piccolo mondo illustrato da esplorare. Portfolio di illustrazione di Claudia Attenni.">
+  <title>Non toccare niente — Claudia Attenni</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  
+<div class="schermata-caricamento" id="schermata-caricamento">
+  <div class="gioco-contenuto">
+    <p class="soprattitolo">MISSIONE ZERO · PRIMA DI ENTRARE</p>
+
+    <img
+      src="assets/personaggio-pennello.PNG"
+      alt=""
+      class="caricamento-personaggio"
+    >
+
+    <h2>Ops. È tutto<br><em>fuori posto.</em></h2>
+
+    <p class="gioco-istruzioni">
+      Il mio assistente ha combinato un pasticcio.
+      Mi dai una mano?
+    </p>
+
+    <p class="gioco-progresso" id="gioco-progresso">
+      Forme sistemate: 0 su 3
+    </p>
+
+    <div class="gioco-forme">
+      <div class="forma-trascinabile forma-rossa" draggable="true"
+           data-forma="cerchio" role="button" tabindex="0"
+           aria-label="Cerchio rosso">●</div>
+      <div class="forma-trascinabile forma-gialla" draggable="true"
+           data-forma="quadrato" role="button" tabindex="0"
+           aria-label="Quadrato giallo">■</div>
+      <div class="forma-trascinabile forma-verde" draggable="true"
+           data-forma="stella" role="button" tabindex="0"
+           aria-label="Stella verde">✳</div>
+    </div>
+
+    <div class="gioco-sagome">
+      <div class="sagoma" data-destinazione="cerchio" tabindex="0"
+           aria-label="Destinazione del cerchio">○</div>
+      <div class="sagoma" data-destinazione="quadrato" tabindex="0"
+           aria-label="Destinazione del quadrato">□</div>
+      <div class="sagoma" data-destinazione="stella" tabindex="0"
+           aria-label="Destinazione della stella">✳</div>
+    </div>
+
+    <p class="gioco-messaggio" id="gioco-messaggio" aria-live="polite">
+      Trascina ogni forma nella sagoma corrispondente.
+    </p>
+
+    <button class="bottone b-rosso" id="entra-home" type="button" disabled>
+      Entra nel mio mondo ↗
+    </button>
+
+    <button class="gioco-salta" id="salta-gioco" type="button">
+      Salta il riordino
+    </button>
+  </div>
+</div>
+
+
+
+  <a class="salta-contenuto" href="#contenuto">Salta al contenuto</a>
+
+  <header class="testata">
+    <a class="marchio" href="#inizio" aria-label="Torna all'inizio">CA<span>.</span></a>
+    <p class="testata-nota">Un portfolio illustrato. Più o meno sotto controllo.</p>
+    <nav aria-label="Navigazione principale">
+      <a href="#opere">Le opere</a>
+      <a href="#chi-sono">Chi siamo</a>
+      <a href="#missioni">Missioni</a>
+    </nav>
+  </header>
+
+  <main id="contenuto">
+    <section class="scena scena-inizio" id="inizio" aria-labelledby="titolo-principale">
+      <div class="intro-testo">
+        <p class="soprattitolo">ILLUSTRAZIONE · PERSONAGGI · PICCOLI DISASTRI</p>
+        <h1 id="titolo-principale">Non toccare<br><em id="parola-niente">niente.</em></h1>
+        <p class="intro-descrizione">Un piccolo universo illustrato.<br> Io l'ho disegnato, lui sostiene di gestirlo.</p>
+        <a class="link-freccia" href="#caos">Entra pure, se proprio insisti <span aria-hidden="true">↘</span></a>
+      </div>
+
+      <div class="palco" aria-label="Scena interattiva con il personaggio">
+        <div class="pennellate" id="pennellate" aria-hidden="true"></div>
+        <button class="pulisci-pennellate" id="pulisci-pennellate" type="button">
+  PULISCI TUTTO
+</button>
+        <div class="sole decorazione" aria-hidden="true"></div>
+        <div class="nuvola decorazione" aria-hidden="true"></div>
+        <div class="linea-terra" aria-hidden="true"></div>
+        <div class="fumetto fumetto-eroe" id="fumetto" role="status" aria-live="polite">Ah, ciao! Non premere quel pulsante.</div>
+        <button class="personaggio-bottone" id="personaggio" type="button" aria-label="Parla con il personaggio">
+          <img src="assets/personaggio-pennello.PNG" alt="" class="personaggio-img">
+        </button>
+        <button class="pulsante-guai" id="pulsante-guai" type="button">NON PREMERE</button>
+        <!-- <span class="nota-palco">Psst… prova a cliccare sulle cose.</span> -->
+        <span class="stella stella-uno decorazione" aria-hidden="true">✳</span>
+        <span class="stella stella-due decorazione" aria-hidden="true">✳</span>
+      </div>
+      <a class="invito-scroll" href="#caos"><span aria-hidden="true">↓</span> Continua a curiosare</a>
+    </section>
+
+   
+<section class="scena scena-caos" id="caos" aria-labelledby="titolo-caos">
+  <div class="numero-scena">01 / IL PICCOLO INCIDENTE</div>
+
+  <div class="caos-griglia">
+    <div class="caos-testo">
+      <p class="soprattitolo">OPS. È SUCCESSO DI NUOVO.</p>
+
+      <h2 id="titolo-caos">
+        Avevo detto<br>
+        <em>di non toccare.</em>
+      </h2>
+
+      <p>
+        Doveva solo dare un'occhiata.
+        Adesso i testi sono fuori posto,
+        le forme fanno quello che vogliono
+        e lui sostiene di aver migliorato tutto.
+      </p>
+
+      <p class="caos-battuta">
+        «Io? Non ho fatto niente.»
+      </p>
+
+      <button class="bottone b-burro" id="rifai-guai" type="button">
+        Scopri cos'ha combinato ↗
+      </button>
+    </div>
+
+   <div class="illustrazione-caos" id="illustrazione-caos">
+  <img
+    src="assets/personaggio-caos.PNG"
+    alt="Il collega che ha combinato il caos"
+    class="personaggio-caos"
+    id="personaggio-caos"
+  >
+</div>
+  <!-- <span class="mini-didascalia">
+    un incidente perfettamente intenzionale*
+  </span> -->
+
+
+      <!-- <span class="mini-didascalia">
+        un incidente perfettamente intenzionale*
+      </span> -->
+    </div>
+  </div>
+</section>
+
+
+    <section class="scena scena-opere" id="opere" aria-labelledby="titolo-opere">
+      <div class="intestazione-sezione">
+        <div>
+          <p class="soprattitolo">COSE FATTE CON LE MIE MANI</p>
+          <h2 id="titolo-opere">Le opere.<br><em>Lui non le ha toccate.</em></h2>
+        </div>
+        <p class="testo-laterale">Una selezione di mondi, personaggi e storie. Clicca su una tavola per aprire la scheda dimostrativa.</p>
+      </div>
+
+      <div class="griglia-opere">
+        <button class="opera opera-rossa" type="button" data-opera="0">
+          <span class="opera-immagine" aria-hidden="true"><span class="opera-forma forma-a"></span><span class="opera-forma forma-b"></span><span class="opera-forma forma-c"></span></span>
+          <span class="opera-info"><span><strong>Fuori dal foglio</strong><small>ILLUSTRAZIONE · SERIE</small></span><span class="opera-freccia">↗</span></span>
+        </button>
+        <button class="opera opera-gialla" type="button" data-opera="1">
+          <span class="opera-immagine" aria-hidden="true"><span class="opera-forma forma-a"></span><span class="opera-forma forma-b"></span><span class="opera-forma forma-c"></span></span>
+          <span class="opera-info"><span><strong>Manuale per perdersi</strong><small>PERSONAGGI · EDITORIALE</small></span><span class="opera-freccia">↗</span></span>
+        </button>
+        <button class="opera opera-blu" type="button" data-opera="2">
+          <span class="opera-immagine" aria-hidden="true"><span class="opera-forma forma-a"></span><span class="opera-forma forma-b"></span><span class="opera-forma forma-c"></span></span>
+          <span class="opera-info"><span><strong>Un posto tutto mio</strong><small>ILLUSTRAZIONE · RICERCA</small></span><span class="opera-freccia">↗</span></span>
+        </button>
+      </div>
+      <p class="nota-segnaposto">Una raccolta di tavole e dettagli che esplora il linguaggio visivo e le diverse fasi del progetto.</p>
+    </section>
+
+    <section class="scena scena-chi-sono" id="chi-sono" aria-labelledby="titolo-chi-sono">
+      <div class="numero-scena">02 / DIETRO LE QUINTE</div>
+      <div class="chi-sono-griglia">
+        
+<div class="ritratto-segnaposto">
+  <img
+    src="assets/personaggio-nonmatto.PNG"
+    alt="Il collega non retribuito, in versione rilassata"
+    class="ritratto-personaggio"
+  >
+
+  <button
+    type="button"
+    class="etichetta-ritratto"
+    id="interruttore-personaggio"
+    aria-pressed="false"
+    aria-label="Fai stressare il collega non retribuito"
+  >
+    collega non retribuito*
+  </button>
+</div>
+
+      
+<div class="dialogo-chi-sono">
+  <p class="soprattitolo">PIACERE, IO SONO CLAUDIA</p>
+
+  <h2 id="titolo-chi-sono">
+    Io disegno.<br>
+    <em>Lui supervisiona.</em>
+  </h2>
+
+  <div class="scambio">
+    <p>
+      <strong>Claudia</strong><br>
+      Creo personaggi, immagini e piccoli mondi attraverso forme,
+      colori e storie.
+    </p>
+
+    <p class="battuta">
+      <strong>Lui</strong><br>
+      Controllo che sia tutto a posto.
+    </p>
+
+    <p>
+      <strong>Claudia</strong><br>
+      Ma perché hai spostato tutti i colori?
+    </p>
+
+    <p class="battuta">
+      <strong>Lui</strong><br>
+      Li ho messi in ordine alfabetico.
+    </p>
+  </div>
+
+  <p class="bio-vera">
+    Mi piace osservare le piccole cose, raccogliere dettagli e trovare
+    significati in ciò che spesso passa inosservato. Le esperienze
+    personali, le relazioni, i ricordi, la natura e la quotidianità
+    sono il punto di partenza del mio lavoro e del mio modo di
+    guardare il mondo.
+
+    Attraverso l’illustrazione, il graphic design e l’art direction
+    trasformo idee e suggestioni in immagini, forme e composizioni.
+    Mi interessa creare un linguaggio visivo che sappia raccontare,
+    suscitare curiosità e lasciare spazio a interpretazioni personali.
+  </p>
+</div>
+
+      </div>
+    </section>
+
+    <section class="scena scena-missioni" id="missioni" aria-labelledby="titolo-missioni">
+      <div class="intestazione-sezione">
+        <div>
+          <p class="soprattitolo">NON SIAMO STATI SEMPRE QUI</p>
+          <h2 id="titolo-missioni">Missioni<br><em>compiute.</em></h2>
+        </div>
+        <p class="testo-laterale">Contest, selezioni, mostre e festival: esperienze che raccontano la crescita del mio percorso creativo.</p>
+      </div>
+     <details class="missione" data-contest="0">
+  <summary>
+    <span class="missione-numero">01</span>
+    <div>
+      <p class="missione-tipo">CONTEST / FESTIVAL</p>
+      <h3>«Sotto la superficie il tempo respira»</h3>
+      <p>Selezionata/Mostra · Radici.Festival · 5–6 giugno 2026</p>
+    </div>
+    <span class="missione-icona" aria-hidden="true">↗</span>
+  </summary>
+  <div class="missione-dettaglio">
+    <p>In occasione di <b>Radici.Festival</b>, a San Lucido, in Calabria, ho partecipato a un weekend dedicato agli illustratori selezionati dal contest. <br>Due giornate di incontro e sperimentazione, durante le quali abbiamo preso parte a diversi workshop di illustrazione, confrontandoci con altri creativi e approfondendo nuove possibilità espressive. L'opera presentata, <i>«Sotto la superficie il tempo respira»</i>, è stata inoltre esposta in una mostra organizzata nell'ambito del festival, entrando a far parte del percorso espositivo dell'evento.</p>
+    <div class="missione-galleria">
+      <!-- Qui inseriremo da 3 a 5 immagini -->
+    </div>
+  </div>
+</details>
+
+<details class="missione" data-contest="1">
+  <summary>
+    <span class="missione-numero">02</span>
+    <div>
+      <p class="missione-tipo">ILLUSTRAZIONE / RISTORAZIONE</p>
+      <h3>La Mandorla - Una facciata da raccontare</h3>
+      <p>Giugno 2026</p>
+    </div>
+    <span class="missione-icona" aria-hidden="true">↗</span>
+  </summary>
+  <div class="missione-dettaglio">
+    <p><b>La Mandorla</b> è una delle gelaterie più storiche e conosciute di <b>San Lucido</b>, in Calabria. Ho realizzato un'illustrazione della sua facciata, dedicandola ai proprietari e a un luogo che rappresenta un pezzo della storia e dell'identità del paese. <br>Un piccolo omaggio illustrato a un'attività storica, ai suoi dettagli e ai ricordi che custodisce.</p>
+    <div class="missione-galleria">
+      <!-- Qui inseriremo da 3 a 5 immagini -->
+    </div>
+  </div>
+</details>
+
+<details class="missione" data-contest="2">
+  <summary>
+    <span class="missione-numero">03</span>
+    <div>
+      <p class="missione-tipo">CONTEST / SELEZIONE</p>
+      <h3>Azienda Agricola Geraci</h3>
+      <p>Selezionata/Mostra · Monza · 4 Luglio 2026</p>
+    </div>
+    <span class="missione-icona" aria-hidden="true">↗</span>
+  </summary>
+  <div class="missione-dettaglio">
+    <p>Sono stata selezionata dall'<b>Azienda Agricola Geraci</b>, a Monza, per partecipare a una mostra collettiva dedicata alle opere selezionate. L'esposizione è stata allestita tra i filari di frutti di bosco dell'azienda, creando un incontro inaspettato tra <b>illustrazione</b> e <b>natura</b>. Un'occasione per portare il mio lavoro fuori dagli spazi espositivi tradizionali e inserirlo in un contesto autentico, a stretto contatto con il paesaggio.<br>È stata anche una bella occasione per conoscere altri illustratori, condividere esperienze e confrontarsi attraverso il linguaggio comune del disegno.</p>
+    <div class="missione-galleria">
+      <!-- Qui inseriremo da 3 a 5 immagini -->
+    </div>
+  </div>
+</details>
+
+<details class="missione" data-contest="3">
+  <summary>
+    <span class="missione-numero">04</span>
+    <div>
+      <p class="missione-tipo">CONTEST / SELEZIONE</p>
+      <h3>Montefalco Sagrantino - etichetta d'autore</h3>
+      <p>2° posto/Mostra · Montefalco · Aprile 2026</p>
+    </div>
+    <span class="missione-icona" aria-hidden="true">↗</span>
+  </summary>
+  <div class="missione-dettaglio">
+    <p>Ho partecipato al contest <b>Etichetta d'Autore 2022</b>, dedicato alla realizzazione di un'etichetta illustrata per il mondo del vino. Il mio progetto ha conquistato il <b>secondo posto</b>, entrando tra le opere selezionate per la mostra organizzata in occasione dell'iniziativa. Un'esperienza che mi ha permesso di sperimentare il dialogo tra illustrazione e design, dando forma a un progetto capace di unire creatività e identità visiva.</p>
+    <div class="missione-galleria">
+      <!-- Qui inseriremo da 3 a 5 immagini -->
+    </div>
+  </div>
+</details>
+      <p class="nota-segnaposto">Le tappe e le esperienze che hanno segnato il mio percorso artistico e professionale.</p>
+    </section>
+
+    <section class="finale" id="contatti" aria-labelledby="titolo-finale">
+      <div class="finale-decorazione" aria-hidden="true">✳</div>
+      <p class="soprattitolo">FINE DEL TOUR. FORSE.</p>
+      <h2 id="titolo-finale">Hai visto tutto?<br><em>Non credo.</em></h2>
+      <div class="fumetto finale-fumetto" id="fumetto-finale">Ci rivediamo alla prossima combinazione.</div>
+      <div class="finale-link">
+        <a class="bottone b-rosso" href="https://claudia20-12.github.io/portfolio/index.html" target="_blank" rel="noreferrer">Il portfolio professionale ↗</a>
+        <a class="link-freccia" href="https://www.instagram.com/claudia_graphicdesign/" target="_blank" rel="noreferrer">Seguimi su Instagram ↗</a>
+      </div>
+      <p class="firma">Illustrazioni e pasticci di Claudia Attenni · 2026</p>
+    </section>
+  </main>
+
+  
+<dialog class="scheda-dialogo" id="scheda-opera" aria-labelledby="titolo-scheda">
+  <button class="chiudi-dialogo" id="chiudi-scheda" type="button" aria-label="Chiudi scheda">×</button>
+
+  <div id="contenuto-descrizione">
+    <p class="soprattitolo" id="categoria-scheda">SCHEDA OPERA</p>
+    <h2 id="titolo-scheda">Titolo dell'opera</h2>
+    <p id="descrizione-scheda">Descrizione del progetto.</p>
+
+    <button id="mostra-galleria" class="link-freccia" type="button">
+      Scopri il progetto ↗
+    </button>
+  </div>
+
+  <section id="contenuto-galleria" hidden aria-label="Galleria delle illustrazioni">
+    <button id="torna-descrizione" class="link-freccia" type="button">
+      ← Torna alla descrizione
+    </button>
+
+    <div id="immagini-galleria" class="immagini-galleria"></div>
+  </section>
+</dialog>
+<dialog class="lightbox" id="lightbox-illustrazioni">
+  <button
+    class="lightbox-chiudi"
+    id="chiudi-lightbox"
+    type="button"
+    aria-label="Chiudi immagine"
+  >×</button>
+
+  <button
+    class="lightbox-freccia lightbox-precedente"
+    id="immagine-precedente"
+    type="button"
+    aria-label="Immagine precedente"
+  >←</button>
+
+  <figure class="lightbox-contenuto">
+    <img id="immagine-ingrandita" src="" alt="">
+    <figcaption id="contatore-immagini"></figcaption>
+  </figure>
+
+  <button
+    class="lightbox-freccia lightbox-successiva"
+    id="immagine-successiva"
+    type="button"
+    aria-label="Immagine successiva"
+  >→</button>
+</dialog>
+
+  <footer class="piede">
+    <a class="marchio" href="#inizio">CA<span>.</span></a>
+    <p>Fatto con cura. E con una supervisione discutibile.</p>
+    <a href="#inizio">Torna su ↑</a>
+    
+<button type="button" id="rivivi-gioco" class="gioco-rivivi">
+  Rivivi il gioco ✳
+</button>
+
+  </footer>
+  <button id="ripristina-sito" type="button" hidden>
+  Rimetti in ordine ↺
+</button>
+</body>
+</html>

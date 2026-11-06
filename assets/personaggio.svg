@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 420" role="img" aria-labelledby="titolo descrizione">
+  <title id="titolo">Personaggio illustrativo provvisorio</title>
+  <desc id="descrizione">Un personaggio geometrico con cappello rosso, corpo blu e naso lungo. È un segnaposto da sostituire con il disegno originale dell'autrice.</desc>
+  <g stroke="#272723" stroke-width="4" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M92 164 Q70 118 100 85 Q130 53 167 78 Q198 99 188 145 L176 208 L100 206 Z" fill="#e8c9c0"/>
+    <path d="M97 102 Q121 58 174 83 L194 104 L78 111 Z" fill="#cf382e"/>
+    <path d="M75 109 Q129 91 200 109 L202 123 Q137 113 72 126 Z" fill="#cf382e"/>
+    <path d="M151 126 Q177 130 194 146 L233 163 L192 173 Q171 159 151 160" fill="#e8c9c0"/>
+    <ellipse cx="128" cy="126" rx="6" ry="8" fill="#272723" stroke="none"/>
+    <ellipse cx="158" cy="128" rx="6" ry="8" fill="#272723" stroke="none"/>
+    <path d="M129 151 Q144 162 159 149" fill="none"/>
+    <path d="M104 199 Q80 236 88 288 L201 288 Q206 237 176 199 Z" fill="#a9c3ce"/>
+    <path d="M108 212 Q78 236 65 274 L83 283 L119 245" fill="#e8c9c0"/>
+    <path d="M177 211 Q207 229 223 268 L207 279 L173 246" fill="#e8c9c0"/>
+    <path d="M111 285 L106 366 L133 366 L151 299 L169 366 L197 366 L188 285 Z" fill="#272723"/>
+    <path d="M99 366 L137 366 L138 382 L92 382 Q84 377 99 366 Z" fill="#cf382e"/>
+    <path d="M165 366 L199 366 L216 382 L166 382 Q159 377 165 366 Z" fill="#cf382e"/>
+    <path d="M111 229 Q145 250 181 226" fill="none" stroke="#272723" stroke-width="3"/>
+  </g>
+  <path d="M108 87 Q129 63 164 82" fill="none" stroke="#f8f6f0" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="239" cy="88" r="12" fill="#e7c96e" stroke="#272723" stroke-width="3"/>
+  <path d="M239 68 V61 M239 115 V108 M219 88 H212 M266 88 H259" stroke="#272723" stroke-width="3" stroke-linecap="round"/>
+</svg>
