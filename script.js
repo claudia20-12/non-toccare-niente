@@ -168,7 +168,7 @@ const opere = [
   titolo: "Fuori dal foglio",
   categoria: "ILLUSTRAZIONE · CONTEST",
   descrizione: "Una raccolta di illustrazioni realizzate per diversi contest, in cui il personaggio diventa protagonista di nuove sfide creative. Ogni partecipazione è un'occasione per sperimentare situazioni, temi e linguaggi visivi differenti, dando vita a interpretazioni sempre nuove.",
-  immagini: [],
+  filePresenti: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
   cartella: "libro",
   numeroImmagini: 12,
   estensioni: ["jpeg", "JPEG", "jpg", "JPG", "png", "PNG"]
