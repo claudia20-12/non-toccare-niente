@@ -211,7 +211,7 @@ const opere = [
   immagini: [],
   cartella: "unpostotuttomio",
   numeroImmagini: 123,
-  estensione: "JPEG",
+  estensione: "jpeg",
   filePresenti: [
     1, 2, 4, 5, 6, 7, 8, 10,
     11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
