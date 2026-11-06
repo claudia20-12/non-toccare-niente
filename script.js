@@ -171,7 +171,7 @@ const opere = [
   immagini: [],
   cartella: "libro",
   numeroImmagini: 12,
-  estensione: "JPEG"
+  estensione: "jpeg"
 },
 {
   titolo: "Manuale per perdersi",
