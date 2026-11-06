@@ -295,18 +295,18 @@ if (!opera.città || opera.città.length === 0) return;
   const img = document.createElement("img");
 
   const estensioni = {
-    1: "JPEG",
-    2: "JPG",
-    3: "JPEG",
-    4: "JPEG",
-    5: "JPG",
-    6: "JPEG",
-    7: "JPEG",
-    8: "PNG",
-    9: "JPEG",
-    10: "JPEG",
-    11: "JPG",
-    12: "JPEG"
+    1: "jpeg",
+    2: "jpg",
+    3: "jpeg",
+    4: "jpeg",
+    5: "jpg",
+    6: "jpeg",
+    7: "jpeg",
+    8: "png",
+    9: "jpeg",
+    10: "jpeg",
+    11: "jpg",
+    12: "jpeg"
   };
 
   img.src = `assets/illustrazione${numero}.${estensioni[numero]}`;
