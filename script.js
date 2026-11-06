@@ -606,9 +606,9 @@ function mostraImmagine(numero) {
   const formato = String(numeroFile).padStart(2, "0");
 
 immagineIngrandita.onerror = () => {
-  if (immagineIngrandita.src.endsWith(".JPEG")) {
+  if (immagineIngrandita.src.endsWith(".jpeg")) {
     immagineIngrandita.src =
-      `${operaCorrente.cartella}/${formato}.PNG`;
+      `${operaCorrente.cartella}/${formato}.png`;
   }
 };
 
